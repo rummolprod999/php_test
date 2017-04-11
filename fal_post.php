@@ -36,7 +36,7 @@ $ranswer = $_POST["ranswer"];
 $info = $_POST["info"];
 
 
-$query = $pdo->prepare('INSERT INTO il_find_a_link_items (difficult, fimg_url, simg_url, timg_url, 	ranswer) VALUE (:difficult, :fimg_url, :simg_url, timg_url, :ranswer)');
+$query = $pdo->prepare('INSERT INTO il_find_a_link_items (difficult, fimg_url, simg_url, timg_url, 	ranswer) VALUES (:difficult, :fimg_url, :simg_url, timg_url, :ranswer)');
 $query->bindParam(':difficult', $difficult);
 $query->bindParam(':fimg_url', $arr_image[0]);
 $query->bindParam(':simg_url', $arr_image[1]);
